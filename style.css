@@ -104,7 +104,7 @@ body {
     cursor: pointer;
 }
 
-.output-text {
+.desktop-box-right {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -115,6 +115,16 @@ body {
     background-color: var(--white);
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
+}
+
+.output-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.output-text img {
+    display: none;
 }
 
 .output-text h2 {
@@ -131,11 +141,30 @@ body {
     line-height: 2.4rem;
 }
 
+.output-script {
+    display: none;
+}
+
+.copy-text {
+    width: 332px;
+    margin: 32px;
+    padding: 24px;
+    border-radius: 24px;
+    background-color: transparent;
+    color: var(--dark-blue);
+    font-weight: 400;
+    font-size: 1.6rem;
+    font-family: inherit;
+    border: 1px var(--dark-blue) solid;
+    cursor: pointer;
+    height: 67px;
+}
+
 @media (min-width: 600px) {
     .logo {
         margin: 74px 0 0 40px;
     }
-    .input-text, .warning img, .output-text {
+    .input-text, .warning img, .desktop-box-right {
         margin-left: 40px;
     }
     .input-text textarea {
@@ -153,7 +182,7 @@ body {
         margin: 16px 40px 16px 12px;
         width: 332px;
     }
-    .output-text {
+    .desktop-box-right {
         margin-right: 40px;
     }
 }
@@ -168,29 +197,47 @@ body {
     main {
         display: flex;
         flex-direction: row;
+        width: 1400px;
+        margin: 0 auto;
     }
     .logo {
         margin: 40px 0 0 84px;
     }
-    .input-text, .warning img, .output-text {
+    .input-text, .warning img {
         margin-left: 200px;
     }
     .input-text textarea {
-        height: 300px;
+        height: 600px;
+        width: 650px;
     }
     .buttons {
         margin: 16px 40px 72px 200px;
     }
     .encrypt {
-        width: 332px;
+        margin: 0 12px 16px 0;
     }
     .decrypt {
-        margin: 16px 40px 16px 12px;
-        width: 332px;
+        margin: 0 40px 16px 12px;
+    }
+    .desktop-box-right {
+        justify-content: center;
+        align-items: center;
+        height: 940px;
+        width: 400px;
+        margin: 40px 40px 40px 0;
     }
     .output-text {
-        height: 90vh;
-        width: 250px;
-        margin: 40px;
+        display: none;
+    }
+    .output-text img {
+        display: inline;
+    }
+    .output-text h2 {
+        margin: 35px 0 15px 0;
+    }
+    .output-script {
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
     }
 }
